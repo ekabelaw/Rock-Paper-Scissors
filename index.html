@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/styles/style.css">
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1>Rock, Paper, Scissors</h1>
+    </div>
+  </header>
+  <main>
+
+    <div class="winnerInfo">
+      <span class="winner"></span>
+    </div>
+
+    <div class="wrapper">
+      <div class="information">
+        <div class="userInfo">
+          <div class="userPick"></div>
+          <div class="userName"><div class="renderNames"></div>&nbsp;Threw:</div>
+          <div class="customName">
+            <a class="editName">edit name</a>
+            <div class="changeUserName">
+              <input type="text" placeholder="Your Name" class="nameBox">
+              <button class="addBtn">Add Name</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vs">
+          <h1>vs</h1>
+        </div>
+
+        <div class="compInfo">
+          <div class="compPick"></div>
+          <div class="compName">Computer Threw:</div> 
+        </div>
+        
+      </div>
+      <div class="button-container">
+        <div class="textRPS">Select your move</div>
+        <div class="buttons">
+          <button class="rock">
+            <img src="/public/images/rock.png" alt="ss">
+            <span class="tooltiptext">Rock</span>
+          </button>
+          <button class="paper">
+            <img src="/public/images/paper.png" alt="" title="paper">
+            <span class="tooltiptext">Paper</span>
+          </button>
+          <button class="scissors">
+            <img src="/public/images/scissors.png" alt="">
+            <span class="tooltiptext">Scissors</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="score-info">
+        <div class="score"></div>
+        <button class="resetScore">Reset Score</button>
+      </div>
+    </div>
+    
+
+  </main>
+  <script src="/public/scripts/main.js" type="module"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --main: rgb(235, 235, 235);
+  --scnd: rgb(248, 120, 0);
+  --blk: rgb(23, 23, 23);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: var(--main);
+  color: var(--blk);
+}
+
+img {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  height: 100px;
+  padding: 70px 0 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+}
+
+.winnerInfo {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.wrapper .information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.wrapper .information .userInfo {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .information .userInfo .userPick {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .information .userInfo .userName {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper .information .vs {
+  width: 200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .information .compInfo {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .information .compInfo .compPick {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.wrapper .information .compInfo .compName {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .button-container {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper .button-container button {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 100px;
+  margin: 10px;
+  border: solid 2px var(--scnd);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .button-container .textRPS {
+  font-size: 0.75rem;
+  font-weight: 600;
+
+}
+
+
+.wrapper .button-container button:hover {
+  background-color: rgb(255, 161, 54);
+}
+
+.wrapper .button-container button:active {
+  background-color: var(--scnd);
+}
+
+
+.move-icon {
+  aspect-ratio: 1/1;
+  width: 200px;
+  padding: 10px;
+  animation: icon 0.3s ease;
+}
+
+@keyframes icon {
+  from {
+    transform: scale(70%);
+  }
+
+  to {
+    transform: scale(100%);
+  }
+}
+
+.score-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.score {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.resetScore {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: none;
+  border-radius: 10px;
+  background-color: var(--scnd);
+  color: var(--main);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resetScore:hover {
+  background-color: rgb(255, 161, 54);
+  color: var(--main);
+}
+
+.resetScore:active {
+  background-color: rgb(248, 112, 0);
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 70px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -35%;
+  left: 50%;
+  margin-left: -35px;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.wrapper .button-container button:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+.editName {
+  transform: translate(-25px, -15px);
+  display: block;
+  position: absolute;
+  font-size: .75rem;
+  cursor: pointer;
+  color: var(--scnd);
+}
+
+.editName:hover {
+  color: blue;
+}
+
+.changeUserName {
+  display: none;
+
+}
+
+.nameBox:focus:valid {
+  background-color: var(--main);
+  color: var(--scnd);
+  border-bottom: 2px solid var(--scnd);
+  border-radius: px;
+  padding: 5px;
+  outline: none;
+  font-weight: 600;
+}
+
+
+.nameBox {
+  width: 150px;
+  height: 30px;
+  margin-right: 10px;
+  background: var(--main);
+  border: none;
+  font-size: 1rem;
+  color: var(--blk);
+  font-weight: 400;
+  font-size: 1rem;
+  border-bottom: 2px solid var(--scnd);
+}
+
+.addBtn {
+  width: 70px;
+  padding: 5px;
+  background-color: var(--scnd);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: var(--main);
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 375px) and (max-width:576px) {
+  .title {
+    background-color: red;
+    font-size: 0.75rem;
+    padding: 20px 0 20px 0;
+  }
+
+  .winnerInfo {
+    font-size: 1rem;
+    height: 50px;
+  }
+
+  .wrapper .information {
+    font-size: 0.75rem;
+    gap: 5px;
+  }
+
+  .wrapper .information .vs {
+    width: 50px;
+  }
+
+  .wrapper .information .userInfo {
+    width: 100px;
+  }
+
+  .wrapper .information .compInfo {
+    width: 100px;
+  }
+
+  .wrapper .button-container {
+    padding: 10px;
+  }
+
+  .wrapper .button-container button {
+    width: 60px;
+    margin: 5px;
+    border: solid 1px var(--scnd);
+  }
+
+  .move-icon {
+    aspect-ratio: 1/1;
+    width: 150px;
+    padding: 10px;
+    animation: icon 0.3s ease;
+  }
+
+  .score {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
